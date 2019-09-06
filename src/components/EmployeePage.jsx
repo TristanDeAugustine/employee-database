@@ -1,9 +1,30 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Axios from 'axios'
 
-export class EmployeePage extends Component {
-  render() {
-    return <div></div>
+const EmployeePage = props => {
+  const [employeeData, setEmployeeData] = useState('')
+
+  const fetchEmployeeData = async () => {
+    const resp = await Axios.post(
+      `https://sdg-staff-directory-app.herokuapp.com/api/developermingle/Employees/${props.match.params.employee}`
+    )
+    console.log(resp.data)
+    setEmployeeData(resp.data)
   }
+
+  useEffect(() => {
+    fetchEmployeeData()
+  }, [])
+  return (
+    <div>
+      <h2>First Name: {employeeData.firstName}</h2>
+      <h3>Last Name: {employeeData.lastName}</h3>
+      <p>Job Title: {employeeData.jobTitle}</p>
+      <p>Email: {employeeData.email}</p>
+      <p>Phone Number: {employeeData.phoneNumber}</p>
+    </div>
+  )
 }
 
 export default EmployeePage

@@ -1,24 +1,39 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Axios from 'axios'
 
-class Homepage extends Component {
-  state = {
-    employees: ['mia khalifa']
-  }
+const HomePage = () => {
+  const [employees, setEmployees] = useState([])
 
-  componentDidMount() {
-    const response = Axios.get(
-      'https://sdg-staff-directory-app.herokuapp.com/api/developersmingle/Employees'
+  const fetchEmployees = async () => {
+    const resp = await Axios.get(
+      'https://sdg-staff-directory-app.herokuapp.com/api/Company/developersmingle'
     )
-    this.setState({
-      employees: response.data
-    })
+    console.log(resp.data)
+    setEmployees(resp.data)
   }
 
-  render() {
-    return <div>{console.log(this.state.employees)}</div>
-  }
+  useEffect(() => {
+    fetchEmployees()
+  }, [])
+
+  return (
+    <div>
+      <nav>
+        <ul>
+          {employees.map(employee => {
+            return (
+              <Link to={`/${employee.id}`}>
+                <li className="employee-list">
+                  <h3>{employee.firstName}</h3>
+                </li>
+              </Link>
+            )
+          })}
+        </ul>
+      </nav>
+    </div>
+  )
 }
 
-export default Homepage
+export default HomePage

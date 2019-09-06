@@ -1,5 +1,9 @@
 :root {
   font: 16px / 1 sans-serif;
+  background-image: url(https://www.freelancinggig.com/blog/wp-content/uploads/2018/10/Good-Software-Developers.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
 }
 
 html {
@@ -12,6 +16,51 @@ body {
   text-align: center;
 }
 
+.Link-Home {
+  padding: 1rem;
+  display: block;
+  color: white;
+  text-align: center;
+
+  text-decoration: none;
+}
 .Link-Employee {
   padding: 1rem;
+  display: block;
+  color: white;
+  text-align: center;
+
+  text-decoration: none;
+}
+
+.Link-Employee-Page {
+  padding: 1rem;
+  display: block;
+  color: white;
+  text-align: center;
+
+  text-decoration: none;
+}
+
+.nav-bar {
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid black;
+}
+
+a:hover {
+  background-color: lightseagreen;
+  font-size: 150%;
+}
+
+.header {
+  color: whitesmoke;
+}
+
+.img {
+  background-size: cover;
+  height: 500px;
+  position: relative;
 }

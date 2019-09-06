@@ -8,8 +8,8 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <h1> Developers Mingle </h1>
-        <nav>
+        <nav className="nav-bar">
+          <h1 className="header"> Developers Mingle </h1>
           <Link className="Link-Home" to="/HomePage">
             HomePage
           </Link>
@@ -20,6 +20,7 @@ class App extends Component {
             Employee Page
           </Link>
         </nav>
+
         <Switch>
           <Route exact path="/HomePage" component={HomePage} />
           <Route exact path="/Add" component={AddNewEmployee} />
