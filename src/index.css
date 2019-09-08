@@ -1,8 +1,7 @@
 :root {
   font: 16px / 1 sans-serif;
-  background-image: url(https://www.freelancinggig.com/blog/wp-content/uploads/2018/10/Good-Software-Developers.jpg);
-  background-repeat: no-repeat;
-  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://miro.medium.com/max/3840/1*n2Kx9gwNfa9zkWMDBJU7bw.png);
   background-size: cover;
 }
 
@@ -46,8 +45,8 @@ body {
   overflow: hidden;
   background-color: #333;
   display: flex;
-  justify-content: flex-start;
-  border: 1px solid black;
+  justify-content: space-around;
+  border: 1px solid white;
 }
 
 a:hover {
@@ -59,8 +58,26 @@ a:hover {
   color: whitesmoke;
 }
 
-.img {
-  background-size: cover;
-  height: 500px;
-  position: relative;
+.george {
+  color: whitesmoke;
+  font-size: 20px;
+  margin-top: 5rem;
+  display: inline-flex;
+  box-shadow: #333;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.gabby {
+  color: black;
+}
+
+a {
+  color: wheat;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.emp-layout {
+  color: wheat;
 }

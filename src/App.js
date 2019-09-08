@@ -9,16 +9,18 @@ class App extends Component {
     return (
       <Router>
         <nav className="nav-bar">
-          <h1 className="header"> Developers Mingle </h1>
-          <Link className="Link-Home" to="/HomePage">
-            HomePage
-          </Link>
-          <Link className="Link-Employee" to="/Add">
-            Add New Employee
-          </Link>
-          <Link className="Link-Employee-Page" to="/EmployeePage">
-            Employee Page
-          </Link>
+          <header className="darken">
+            <h1 className="header"> Developers Mingle </h1>
+            <Link className="Link-Home" to="/HomePage">
+              HomePage
+            </Link>
+            <Link className="Link-Employee" to="/Add">
+              Add New Employee
+            </Link>
+            <Link className="Link-Employee-Page" to="/EmployeePage">
+              Employee Page
+            </Link>
+          </header>
         </nav>
 
         <Switch>
