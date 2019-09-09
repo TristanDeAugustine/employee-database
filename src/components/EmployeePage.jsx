@@ -8,7 +8,7 @@ const EmployeePage = props => {
 
   const fetchEmployeeData = async () => {
     const resp = await Axios.get(
-      `https://sdg-staff-directory-app.herokuapp.com/api/developersmingle/Employees/${props.match.params.employee}`
+      `https://sdg-staff-directory-app.herokuapp.com/api/developersmingle/Employees/${props.match.params.id}`
     )
     console.log(resp.data)
     setEmployeeData(resp.data)
