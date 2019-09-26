@@ -8,19 +8,17 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <h1 className="header"> Developers Mingle </h1>
         <nav className="nav-bar">
-          <header className="darken">
-            <h1 className="header"> Developers Mingle </h1>
-            <Link className="Link-Home" to="/HomePage">
-              HomePage
-            </Link>
-            <Link className="Link-Employee" to="/Add">
-              Add New Employee
-            </Link>
-            <Link className="Link-Employee-Page" to="/EmployeePage">
-              Employee Page
-            </Link>
-          </header>
+          <Link className="Link-Home" to="/HomePage">
+            HomePage
+          </Link>
+          <Link className="Link-Employee" to="/Add">
+            Add New Employee
+          </Link>
+          <Link className="Link-Employee-Page" to="/EmployeePage">
+            Employee Page
+          </Link>
         </nav>
 
         <Switch>

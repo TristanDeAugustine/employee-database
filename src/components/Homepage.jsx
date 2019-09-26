@@ -18,20 +18,22 @@ const HomePage = () => {
   }, [])
 
   return (
-    <div>
-      <nav>
-        <ul className="list-ul">
-          {employees.map(employee => {
-            return (
-              <Link className="link-employee" to={`/${employee.id}`}>
-                <li className="employee-list">
-                  <h3>{employee.firstName}</h3>
-                </li>
-              </Link>
-            )
-          })}
-        </ul>
-      </nav>
+    <div class="container">
+      <div class="content">
+        <nav>
+          <ul className="list-ul">
+            {employees.map(employee => {
+              return (
+                <Link className="link-employee" to={`/${employee.id}`}>
+                  <li className="employee-list">
+                    <h3>{employee.firstName}</h3>
+                  </li>
+                </Link>
+              )
+            })}
+          </ul>
+        </nav>
+      </div>
     </div>
   )
 }

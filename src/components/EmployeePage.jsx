@@ -17,7 +17,7 @@ const EmployeePage = props => {
 
   const deleteEmployee = async () => {
     const resp = await Axios.delete(
-      `https://sdg-staff-directory-app.herokuapp.com/api/developersmingle/Employees/${employeeId}`
+      `https://sdg-staff-directory-app.herokuapp.com/api/developersmingle/Employees/${employeeIld}`
     )
   }
 
@@ -26,24 +26,28 @@ const EmployeePage = props => {
   }, [])
   return (
     <article>
-      <section className="emp-layout">
-        <div className="employee-card">
-          <h2>First Name: {employeeData.firstName}</h2>
-          <h3>Last Name: {employeeData.lastName}</h3>
-          <p>Job Title: {employeeData.jobTitle}</p>
-          <p>Email: {employeeData.email}</p>
-          <p>Phone Number: {employeeData.phoneNumber}</p>
+      <div class="container">
+        <div class="content">
+          <section className="emp-layout">
+            <div className="employee-card">
+              <h2>First Name: {employeeData.firstName}</h2>
+              <h3>Last Name: {employeeData.lastName}</h3>
+              <p>Job Title: {employeeData.jobTitle}</p>
+              <p>Email: {employeeData.email}</p>
+              <p>Phone Number: {employeeData.phoneNumber}</p>
+            </div>
+          </section>
+          <section>
+            <button
+              type="button"
+              className="delete-button"
+              onClick={deleteEmployee}
+            >
+              Delete Employee
+            </button>
+          </section>
         </div>
-      </section>
-      <section>
-        <button
-          type="button"
-          className="delete-button"
-          onClick={deleteEmployee}
-        >
-          Delete Employee
-        </button>
-      </section>
+      </div>
     </article>
   )
 }

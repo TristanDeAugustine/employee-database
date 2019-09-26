@@ -1,7 +1,6 @@
 :root {
   font: 16px / 1 sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://miro.medium.com/max/3840/1*n2Kx9gwNfa9zkWMDBJU7bw.png);
+  background-image: url(https://miro.medium.com/max/3840/1*n2Kx9gwNfa9zkWMDBJU7bw.png);
   background-size: cover;
 }
 
@@ -80,4 +79,16 @@ a {
 
 .emp-layout {
   color: wheat;
+}
+
+.container {
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  =background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
 }
